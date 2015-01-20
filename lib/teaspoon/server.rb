@@ -12,6 +12,7 @@ module Teaspoon
     end
 
     def start
+      return
       thread = Thread.new do
         disable_logging
         server = Rack::Server.new(rack_options)
@@ -30,6 +31,7 @@ module Teaspoon
     end
 
     def url
+      port = 3000
       "http://127.0.0.1:#{port}"
     end
 
